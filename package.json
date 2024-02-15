@@ -1,0 +1,29 @@
+{
+  "name": "crude-monsters-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "uglify": "uglifyjs index.js --output script.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/plysnh/crude-monsters-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/plysnh/crude-monsters-app/issues"
+  },
+  "homepage": "https://github.com/plysnh/crude-monsters-app#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "uglify-js": "^3.17.4"
+  }
+}
