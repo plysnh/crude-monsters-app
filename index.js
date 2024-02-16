@@ -1,38 +1,41 @@
 import express from "express";
 import bodyParser from "body-parser";
 import monstersRoute from "./routes/monsters.route.js";
-// import { connectDB } from "./database/database.js";
+import { connectDB } from "./database/database.js";
 
 const app = express();
-const port = 7000;
+const port = 3000;
 
-// connectDB();
-import { MongoClient, ServerApiVersion } from "mongodb";
+connectDB();
 
-const uri = "mongodb+srv://nhiphanley:Danang7@cluster0.zf5ukdh.mongodb.net/?retryWrites=true&w=majority";
+// import { MongoClient, ServerApiVersion } from "mongodb";
 
-// Create a MongoClient with a MongoClientOptions object to set the Stable API version
-const client = new MongoClient(uri, {
-  serverApi: {
-    version: ServerApiVersion.v1,
-    strict: true,
-    deprecationErrors: true,
-  }
-});
+// const uri = "mongodb+srv://nhiphanley:Danang7@cluster0.zf5ukdh.mongodb.net/?retryWrites=true&w=majority";
 
-async function run() {
-  try {
-    // Connect the client to the server	(optional starting in v4.7)
-    await client.connect();
-    // Send a ping to confirm a successful connection
-    await client.db("admin").command({ ping: 1 });
-    console.log("Pinged your deployment. You successfully connected to MongoDB!");
-  } finally {
-    // Ensures that the client will close when you finish/error
-    await client.close();
-  }
-}
-run().catch(console.dir);
+// // Create a MongoClient with a MongoClientOptions object to set the Stable API version
+// const client = new MongoClient(uri, {
+//   serverApi: {
+//     version: ServerApiVersion.v1,
+//     strict: true,
+//     deprecationErrors: true,
+//   }
+// });
+
+// async function run() {
+//   try {
+//     // Connect the client to the server	(optional starting in v4.7)
+//     await client.connect();
+//     // Send a ping to confirm a successful connection
+//     await client.db("admin").command({ ping: 1 });
+//     console.log("Pinged your deployment. You successfully connected to MongoDB!");
+//   } finally {
+//     // Ensures that the client will close when you finish/error
+//     await client.close();
+//   }
+// }
+// run().catch(console.dir);
+
+
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }));
 
