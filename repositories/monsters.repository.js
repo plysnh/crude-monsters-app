@@ -2,6 +2,7 @@ import Monster from "../models/monsters.model.js";
 
 export const getMonstersFromRepository = async (query) => {
   try {
+    console.log(query);
     const monsters = await Monster.find(query);
     return monsters;
   } catch (e) {

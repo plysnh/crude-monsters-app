@@ -25,6 +25,7 @@ const companySchema = new mongoose.Schema({
 
 // Main Monster Schema
 const monsterSchema = new mongoose.Schema({
+    id: Number,
     name: String,
     username: String,
     email: String,

@@ -1,5 +1,5 @@
 import express from "express";
-import { getMonster, getMonsters, createMonster, updateMonster, deleteMonster } from "../controllers/monsters.controller";
+import { getMonster, getMonsters, createMonster, updateMonster, deleteMonster } from "../controllers/monsters.controller.js";
 const router = express.Router();
 
 router.get("/", getMonsters)

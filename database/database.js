@@ -8,7 +8,7 @@ export const connectDB = async () => {
     const connection = await mongoose.connect(url, {
       useUnifiedTopology: true,
     });
-    console.log("Database connected successfully");
+    console.log("Monsters Database connected successfully");
   } catch (e) {
     console.log("Failed to connect database:", e);
   }
