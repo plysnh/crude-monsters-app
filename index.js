@@ -4,7 +4,7 @@ import monstersRoute from "./routes/monsters.route.js";
 import { connectDB } from "./database/database.js";
 
 const app = express();
-const port = 3000;
+const port = 7000;
 
 connectDB();
 
