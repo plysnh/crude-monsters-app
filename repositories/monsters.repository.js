@@ -36,6 +36,7 @@ export const createMonstersInRepository = async (payload) => {
   try {
     const newMonster = new Monster(payload);
     const savedMonster = await newMonster.save();
+    console.log(savedMonster)
     return savedMonster;
   } catch (e) {
     throw Error("Error while creating a new monster");
