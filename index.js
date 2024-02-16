@@ -1,46 +1,22 @@
-// import express from "express";
-// console.log(express);
+import express from "express";
+import bodyParser from "body-parser";
+import monsters from "./routes/monsters.route.js";
+import { connectDB } from "./database/database.js";
 
-import { priceCalculation as getPrice } from "./math.js";
-const price = getPrice(200);
-console.log(price);
+const app = express();
+const port = 3000;
 
-const myFunction = function (parameter) {
-    console.log("parameter: ", parameter);
-    };
-    const myES6Function = (parameter) => {
-    console.log("parameter: ", parameter);
-    };
-    
+connectDB();
 
-myFunction();
-myES6Function();
+// // parse application/x-www-form-urlencoded
+// app.use(bodyParser.urlencoded({ extended: false }));
 
-const students = ["tom", "peter", "maria", "claire"];
+// // parse application/json
+// app.use(bodyParser.json());
 
-students.forEach((student) => {
-console.log(student);
-});
+// // routes
+// app.use("/monsters", monsters);
 
-function getMessage() {
-    return "hi, this is a message";
-    }
-
-    const getMessageArrowFunction = () => "hi, this is a message";
-    const message = getMessageArrowFunction();
-
-// console.log(message)
-function getUser() {
-        const user = {
-        name: "Maria",
-        age: 26,
-        };
-        return user;
-        }
-        const getUserArrowFunction = () => ({
-        name: "Maria",
-        age: 26,
-        });
-        const user = getUserArrowFunction();
-        console.log(user.name);
-        
+// app.listen(port, function () {
+//   console.log(`🚀 Fire app listening on port ${port}!`);
+// });
